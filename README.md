@@ -1,6 +1,6 @@
-# Glycojons Group Computing Resources
+# Glycojones Group Computing Resources
 
-Glycojons Group has access to some local Linux compute machines: **edith**, **ultron**, and **jarvis**. The lab machine **bmo** can also be used when available. University-level high-performance computing is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
+Glycojones Group has access to some local Linux compute machines: **edith**, **ultron**, and **jarvis**. The lab machine **bmo** can also be used when available. University-level high-performance computing is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
 
 ## Choosing a machine
 
