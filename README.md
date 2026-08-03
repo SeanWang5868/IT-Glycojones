@@ -1,19 +1,17 @@
 # Glycojons Group Computing Resources
 
- Glycojons Group has access to some local Linux compute machines: **edith**, **ultron**, and **jarvis**. The lab machine **bmo** can also be used when available. University-level high-performance computing is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Please contact your PI if you need access to Viking.
+Glycojons Group has access to some local Linux compute machines: **edith**, **ultron**, and **jarvis**. The lab machine **bmo** can also be used when available. University-level high-performance computing is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
 
 ## Choosing a machine
 
 | Machine | CPU | Memory | GPU | Connection | Recommended use |
 |---|---|---|---|---|---|
-| **edith** | Intel Core i9-9900K, 8 cores / 16 threads | 32 GiB | NVIDIA GeForce RTX 2060, 8 GB | `ssh <username>@edith.its.york.ac.uk`  | Interactive work, code development, testing, and small CPU jobs |
-| **ultron** | 2 × Intel Xeon Gold 6526Y, 32 cores / 64 threads in total | 128 GiB | 2 × NVIDIA A30, 24 GB ECC each | `ssh <username>@ysbltest`| Long-running or reliable GPU computation, two independent GPU jobs, and medium-sized parallel CPU jobs |
-| **jarvis** | AMD Ryzen Threadripper PRO 3995WX, 64 cores / 128 threads | 256 GiB | NVIDIA GeForce RTX 3090, 24 GB | `ssh <username>@jarvis.its.york.ac.uk` | Large CPU-parallel workloads, batch processing, and high-throughput single-GPU computation |
-| **bmo** | Intel Core i9-11900, 8 cores / 16 threads | 32 GiB | NVIDIA GeForce RTX 3090, 24 GB | `ssh <username>@bmo.its.york.ac.uk`| Interactive work and single-GPU computation when the machine is available; coordinate long jobs with other users |
+| **edith** | Intel Core i9-9900K, 8 cores / 16 threads | 32 GiB | NVIDIA GeForce RTX 2060, 8 GB | `ssh <username>@edith.its.york.ac.uk`  | code/GPU testing |
+| **ultron** | 2 × Intel Xeon Gold 6526Y, 32 cores / 64 threads | 128 GiB | 2 × NVIDIA A30, 24 GB ECC each | `ssh <username>@ysbltest`|  GPU jobs, medium-sized parallel CPU jobs |
+| **jarvis** | AMD Ryzen Threadripper PRO 3995WX, 64 cores / 128 threads | 256 GiB | NVIDIA GeForce RTX 3090, 24 GB | `ssh <username>@jarvis.its.york.ac.uk` | CPU-parallel workloads, batch processing |
+| **bmo** | Intel Core i9-11900, 8 cores / 16 threads | 32 GiB | NVIDIA GeForce RTX 3090, 24 GB | `ssh <username>@bmo.its.york.ac.uk`|  single-GPU computation |
 
-Connections may require the University of York network or VPN.
-
-For short interactive (GPU) tests, choose **edith**. For large numbers of CPU tasks, choose **jarvis**. For GPU memory or two simultaneous GPU jobs, choose **ultron (ysbltest)**. **bmo** provides an additional RTX 3090 but is shared across YSBL, so availability may vary. For workloads that exceed the local machines, use **Viking**.
+Connections may require the University of York network or VPN. For workloads that exceed the local machines, use **Viking**.
 
 ### Structural databases on jarvis
 
@@ -21,7 +19,7 @@ Jarvis maintains local copies of the following structural databases. They are up
 
 | Database | Location |
 |---|---|
-| Standard PDB mmCIF archive | `/vault/xhpi_pdb_July2026/pdb/mmcif` |
+| PDB mmCIF | `/vault/xhpi_pdb_July2026/pdb/mmcif` |
 | PDB-REDO | `/vault/xhpi_pdb_July2026/pdb-redo` |
 
 ### Home directories and backups
@@ -30,11 +28,11 @@ The Linux home directory is stored on the same network filesystem across YSBL co
 
 Snapshots are taken every four hours during the day, retained daily for one week, and then retained weekly for one month. Tape backups are retained for 90 days, and the complete filesystem is also copied nightly to a backup server in a separate machine room. For normal long-term data protection, keep the data on the network filesystem; a backup is not permanent storage for a file that has been deleted from the live filesystem.
 
-If you accidentally delete or damage a file, email Tim as soon as possible. Include the exact file or directory path and the date or range of versions you want recovered. Files noticed missing only after the backup-retention period may be permanently unrecoverable. The network filesystem has room for most routine data, but cryo-EM data and large X-ray datasets should use their dedicated storage facilities.
+If you accidentally delete or damage a file, email **Tim** as soon as possible. Include the exact file or directory path and the date or range of versions you want recovered. Files noticed missing only after the backup-retention period may be permanently unrecoverable. The network filesystem has room for most routine data, but cryo-EM data and large X-ray datasets should use their dedicated storage facilities.
 
 ### Running jobs with Slurm
 
-[Slurm](https://slurm.schedmd.com/) is an open-source workload manager and job scheduler. It queues jobs until the requested CPU and memory resources are available. Slurm is available on **jarvis** and **ultron (ysbltest)**, but not on **edith**. Compute-intensive or long-running work on jarvis and ysbltest should be submitted through Slurm; running such jobs directly in the login shell is discouraged.
+[Slurm](https://slurm.schedmd.com/) is an workload manager and job scheduler. It queues jobs until the requested CPU and memory resources are available. Slurm is available on **jarvis** and **ultron (ysbltest)**, but not on **edith**. Compute-intensive or long-running work on jarvis and ysbltest should be submitted through Slurm; running such jobs directly in the login shell is discouraged.
 
 ## Single-threaded job
 
@@ -97,12 +95,6 @@ echo "Job completed at: $(date)"
 ## Submit a job
 
 ```bash
-sbatch JOBNAME.job
-```
-
-For example:
-
-```bash
 sbatch threaded.job
 ```
 
@@ -127,13 +119,5 @@ squeue -u "$USER"
 Find the job ID with `squeue`, then run:
 
 ```bash
-scancel JOB_ID
-```
-
-For example:
-
-```bash
 scancel 12345
 ```
-
-Only request the CPU cores and memory that the program can actually use. This keeps the shared machines responsive and allows other group members' jobs to run.
