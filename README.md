@@ -19,8 +19,8 @@ Jarvis maintains local copies of the following databases. They are updated every
 
 | Database | Location |
 |---|---|
-| PDB mmCIF | `/vault/xhpi_pdb_July2026/pdb/mmcif` |
-| PDB-REDO | `/vault/xhpi_pdb_July2026/pdb-redo` |
+| PDB mmCIF | `/vault/pdb_mirror/` |
+| PDB REDO | `/vault/pdb-redo` |
 
 ### Home directories and backups
 
