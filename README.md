@@ -1,15 +1,15 @@
 # Glycojones Group Computing Resources
 
-Glycojones Group has access to some local Linux compute machines: **edith**, **ultron**, and **jarvis**. The lab machine **bmo** can also be used when available. University-level high-performance computing is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
+Glycojones Group has access to some local Linux compute machines: **edith**, **ultron**, and **jarvis**. The lab machine **bmo** can also be used when available. University HPC is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
 
 ## Choosing a machine
 
 | Machine | CPU | Memory | GPU | Connection | Recommended use |
 |---|---|---|---|---|---|
-| **edith** | Intel Core i9-9900K, 8 cores | 32 GiB | NVIDIA GeForce RTX 2060, 8 GB | `ssh edith.its.york.ac.uk`  | code/GPU testing |
-| **ultron** | 2 × Intel Xeon Gold 6526Y, 32 cores | 128 GiB | 2 × NVIDIA A30, 24 GB ECC each | `ssh ysbltest.york.ac.uk`|  GPU jobs, medium-sized parallel CPU jobs |
-| **jarvis** | AMD Ryzen Threadripper PRO 3995WX, 64 cores | 256 GiB | NVIDIA GeForce RTX 3090, 24 GB | `ssh jarvis.its.york.ac.uk` | CPU-parallel workloads, batch processing |
-| **bmo** | Intel Core i9-11900, 8 cores | 32 GiB | NVIDIA GeForce RTX 3090, 24 GB | `ssh @bmo.its.york.ac.uk`|  single-GPU computation |
+| **edith** | Intel Core i9-9900K, 8 cores | 32 GiB | RTX 2060, 8 GB | `ssh edith.its.york.ac.uk`  | code/GPU testing |
+| **ultron** | 2 × Intel Xeon Gold 6526Y, 32 cores | 128 GiB | 2 × A30, 24 GB each | `ssh ysbltest.york.ac.uk`|  GPU jobs, medium-sized parallel CPU jobs |
+| **jarvis** | AMD Ryzen Threadripper PRO 3995WX, 64 cores | 256 GiB | RTX 3090, 24 GB | `ssh jarvis.its.york.ac.uk` | CPU-parallel workloads, batch processing |
+| **bmo** | Intel Core i9-11900, 8 cores | 32 GiB | RTX 3090, 24 GB | `ssh bmo.its.york.ac.uk`|  single-GPU computation |
 
 Connections may require the University of York network or VPN. For workloads that exceed the local machines, use **Viking**.
 
