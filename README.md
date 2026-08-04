@@ -1,15 +1,15 @@
 # Glycojones Group Computing Resources
 
-Glycojones Group has access to some local Linux compute machines: **edith**, **ultron**, and **jarvis**. The lab machine **bmo** can also be used when available. University HPC is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
+Glycojones Group has access to some local Linux compute machines: **Edith**, **Ultron**, and **Jarvis**. The lab machine **Bmo** can also be used when available. University HPC is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
 
 ## Choosing a machine
 
 | Machine | CPU | Memory | GPU | Connection | Recommended use |
 |---|---|---|---|---|---|
-| **edith** | Intel Core i9-9900K, 8 cores | 32 GiB | RTX 2060, 8 GB | `ssh edith.its.york.ac.uk`  | code/GPU testing |
-| **ultron** | 2 × Intel Xeon Gold 6526Y, 32 cores | 128 GiB | 2 × A30, 24 GB each | `ssh ysbltest.york.ac.uk`|  GPU jobs, medium-sized parallel CPU jobs |
-| **jarvis** | AMD Ryzen Threadripper PRO 3995WX, 64 cores | 256 GiB | RTX 3090, 24 GB | `ssh jarvis.its.york.ac.uk` | CPU-parallel workloads, batch processing |
-| **bmo** | Intel Core i9-11900, 8 cores | 32 GiB | RTX 3090, 24 GB | `ssh bmo.its.york.ac.uk`|  single-GPU computation |
+| **Edith** | Intel Core i9-9900K, 8 cores | 32 GiB | RTX 2060, 8 GB | `ssh edith.its.york.ac.uk`  | code/GPU testing |
+| **Ultron** | 2 × Intel Xeon Gold 6526Y, 32 cores | 128 GiB | 2 × A30, 24 GB each | `ssh ysbltest.york.ac.uk`|  GPU jobs, medium-sized parallel CPU jobs |
+| **Jarvis** | AMD Ryzen Threadripper PRO 3995WX, 64 cores | 256 GiB | RTX 3090, 24 GB | `ssh jarvis.its.york.ac.uk` | CPU-parallel workloads, batch processing |
+| **Bmo** | Intel Core i9-11900, 8 cores | 32 GiB | RTX 3090, 24 GB | `ssh bmo.its.york.ac.uk`|  single-GPU computation |
 
 Connections may require the University of York network or VPN. For workloads that exceed the local machines, use **Viking**.
 
@@ -32,7 +32,7 @@ If you accidentally delete or damage a file, email **Tim** as soon as possible. 
 
 ### Running jobs with Slurm
 
-[Slurm](https://slurm.schedmd.com/) is an workload manager and job scheduler. It queues jobs until the requested CPU and memory resources are available. Slurm is available on **jarvis** and **ultron (ysbltest)**, but not on **edith**. Compute-intensive or long-running work on jarvis and ysbltest should be submitted through Slurm; running such jobs directly in the login shell is discouraged.
+[Slurm](https://slurm.schedmd.com/) is an workload manager and job scheduler. It queues jobs until the requested CPU and memory resources are available. Slurm is available on **Jarvis** and **Ultron (ysbltest)**, but not on **Edith**. Compute-intensive or long-running work on jarvis and ysbltest should be submitted through Slurm; running such jobs directly in the login shell is discouraged.
 
 ## Single-threaded job
 
