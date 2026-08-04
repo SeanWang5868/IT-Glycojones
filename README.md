@@ -114,7 +114,7 @@ Show only your jobs:
 squeue -u "$USER"
 ```
 
-# Cancel a job
+### Cancel a job
 
 Find the job ID with `squeue`, then run:
 
