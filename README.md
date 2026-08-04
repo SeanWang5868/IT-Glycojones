@@ -34,7 +34,7 @@ If you accidentally delete or damage a file, email **Tim** as soon as possible. 
 
 [Slurm](https://slurm.schedmd.com/) is an workload manager and job scheduler. It queues jobs until the requested CPU and memory resources are available. Slurm is available on **Jarvis** and **Ultron (ysbltest)**, but not on **Edith**. Compute-intensive or long-running work on jarvis and ysbltest should be submitted through Slurm; running such jobs directly in the login shell is discouraged.
 
-## Single-threaded job
+# Single-threaded job
 
 Create a file named, for example, `single.job`:
 
@@ -59,7 +59,7 @@ echo
 echo "Job completed at: $(date)"
 ```
 
-## Multi-threaded job
+# Multi-threaded job
 
 Create a file named, for example, `threaded.job`:
 
@@ -92,7 +92,7 @@ echo "Job completed at: $(date)"
 
 `--cpus-per-task=4` requests four CPU cores. Change this value to match the program and set any program-specific thread option to the same number. `--mem=1G` is the total memory requested by the job, not the memory per CPU.
 
-## Submit a job
+# Submit a job
 
 ```bash
 sbatch threaded.job
@@ -100,7 +100,7 @@ sbatch threaded.job
 
 Slurm prints a job ID after submission. The job output is written to the log file specified by `#SBATCH --output`.
 
-## Check job status
+# Check job status
 
 Show all visible jobs:
 
@@ -114,7 +114,7 @@ Show only your jobs:
 squeue -u "$USER"
 ```
 
-## Cancel a job
+# Cancel a job
 
 Find the job ID with `squeue`, then run:
 
