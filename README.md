@@ -15,12 +15,12 @@ Connections may require the University of York network or VPN. For workloads tha
 
 ### Structural databases on jarvis
 
-Jarvis maintains local copies of the following databases. They are updated every Monday:
+Local mirrors of the PDB databases, updated every Monday:
 
 | Database | Location |
 |---|---|
-| PDB mmCIF | `/vault/pdb_mirror/` |
-| PDB REDO | `/vault/pdb-redo` |
+| PDB mmCIF | `/vault/pdb_mirror/ (Jarvis only)` |
+| PDB REDO | `/vault/pdb-redo/ (Jarvis only)` |
 | PDB mmCIF | `/y/groups/agirre_group/database/pdb` |
 | PDB REDO | `/y/groups/agirre_group/database/pdb-redo` |
 
