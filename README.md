@@ -21,6 +21,8 @@ Jarvis maintains local copies of the following databases. They are updated every
 |---|---|
 | PDB mmCIF | `/vault/pdb_mirror/` |
 | PDB REDO | `/vault/pdb-redo` |
+| PDB mmCIF | `/y/groups/agirre_group/database/pdb` |
+| PDB REDO | `/y/groups/agirre_group/database/pdb-redo` |
 
 ### Home directories and backups
 
