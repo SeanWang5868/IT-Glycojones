@@ -26,7 +26,7 @@ Local mirrors of the PDB databases, updated every Monday:
 
 ### Home directories and backups
 
-The Linux home directory is stored on the same network filesystem across YSBL computers. Files saved under `/y/people/<username>/` are therefore available when you log in to another YSBL Linux machine and are protected by regular backups.
+The Linux home directory is stored on the same network filesystem across YSBL computers. Files saved under `/y/people/abc123/` are therefore available when you log in to any YSBL Linux machine and are protected by regular backups.
 
 Snapshots are taken every four hours during the day, retained daily for one week, and then retained weekly for one month. Tape backups are retained for 90 days, and the complete filesystem is also copied nightly to a backup server in a separate machine room. For normal long-term data protection, keep the data on the network filesystem; a backup is not permanent storage for a file that has been deleted from the live filesystem.
 
