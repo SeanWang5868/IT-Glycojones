@@ -1,4 +1,4 @@
-# Glycojones Group Computing Resources
+# Glycojones Group Computing Resources (York)
 
 Glycojones Group has access to some local Linux compute machines: **Edith**, **Ultron**, and **Jarvis**. The lab machine **Bmo** can also be used when available. University HPC is available through **[Viking](https://vikingdocs.york.ac.uk/)**. Contact your PI if you need access to Viking.
 
